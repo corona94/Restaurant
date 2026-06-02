@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { lucideCirclePlus, lucideBadgeInfo   } from '@ng-icons/lucide';
+import { NgIcon, provideIcons } from '@ng-icons/core';
+
+
 @Component({
   selector: 'app-menu-dish',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgIcon],
+  viewProviders: [provideIcons({ lucideCirclePlus, lucideBadgeInfo })],
   templateUrl: './menu-dish.html',
   styleUrl: './menu-dish.css',
 })

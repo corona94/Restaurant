@@ -6,8 +6,9 @@
    <div 
   *ngFor="let dish of MenuDish"
   class="background-color-card flex items-center p-2 border border-black/10 
-  hover:border-black/20 transition-colors rounded-xl w-full"
+  hover:border-black/20 transition-colors rounded-xl w-full relative"
 >
+
 
   <img 
     [src]="dish.image" 
@@ -15,11 +16,24 @@
     class="w-[118px] h-[118px] rounded-lg object-cover" 
   />
 
+  
+
   <div class="ml-4">
 
-    <h3 class="text-title text-lg font-semibold text-zinc-900">
+     <!-- <div class="absolute top-2  right-2">
+
+    <ng-icon  name="lucideCirclePlus" class="text-2xl  stroke-currrent" color="#89B0AE" strokeWidth="3"></ng-icon>
+    
+
+  </div> -->
+
+ 
+
+    <h3 class="text-title  text-lg font-semibold text-zinc-900">
       {{ dish.name }}
+
     </h3>
+
 
     <p class="text-description text-base text-zinc-600">
       {{ dish.description }}
@@ -31,7 +45,7 @@
 
     <div class="text-sm text-zinc-600 flex items-center gap-1.5">
 
-      <ng-container *ngFor="let etiqueta of dish.etiquetas; let last = last">
+     <!--  <ng-container *ngFor="let etiqueta of dish.etiquetas; let last = last">
 
         <span class="text-description">
           {{ etiqueta }}
@@ -42,9 +56,20 @@
           class="size-1 rounded-full bg-[#777777]"
         ></div>
 
-      </ng-container>
+      </ng-container> -->
+
+ 
+ <div class="absolute bottom-2  right-2">
+
+    <ng-icon  name="lucideCirclePlus" class="text-3xl  stroke-currrent" strokeWidth="3" color="#89B0AE"></ng-icon>
+    
+
+  </div>
+
 
     </div>
+
+    
 
   </div>
 

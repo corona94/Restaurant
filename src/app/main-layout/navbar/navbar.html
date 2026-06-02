@@ -1,4 +1,8 @@
-<nav class="background-color-navbar-1 fixed top-0 left-0 w-full bg-white  z-50">
+<div>
+
+
+
+<nav class="rounded-b-4xl background-color-navbar-1 fixed top-0 left-0 w-full bg-white  z-50 realtive">
     
   <div class="max-w-7xl mx-auto px-4">
     <div class="flex items-center justify-between h-16">
@@ -23,11 +27,55 @@
       
 
     </div>
+
+    
   </div>
+
+    <div class="absolute right-4 top-1/2 -translate-y-1/2 flex gap-4" >
+
+      
+
+      
+      <a href="https://wa.me/523317988980" target="_blank" class="text-white hover:text-green-400 font-semibold">
+        <ng-icon
+  name="lucidePhone"
+  color="#25D366"
+  size="24"
+  strokeWidth="2">
+</ng-icon>
+</a>
+
+
+
+    </div>
+
 </nav> 
 
 
-<nav class="background-color-navbar-2 flex flex-wrap mt-16 justify-between items-center px-4 py-4 bg-white">
+<nav class="background-color-navbar-2 flex flex-wrap mt-16 justify-between items-center px-4 py-4 mb-2 bg-white">
+
+
+
+   <div class="relative w-full mb-2">
+
+  <input
+    type="text"
+    id="first_name"
+    placeholder="Buscar"
+    class=" border border-[#89B0AE]  rounded-2xl
+    text-heading text-sm  focus:ring-brand focus:border-brand 
+    block w-full px-3 py-2.5 pr-10 shadow-xs placeholder:text-body"
+    required 
+  >
+
+  <ng-icon
+    name="lucideSearch"
+    color="#89B0AE"
+    class="text-2xl absolute right-3 top-1/2 -translate-y-1/2">
+  </ng-icon>
+
+</div>
+
 
     <ul class="flex gap-4 px-2 py-0 m-0 my-0">
       <li>
@@ -44,34 +92,30 @@
    box-border border border-default-medium hover:bg-neutral-tertiary-medium 
    hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs 
    font-medium leading-2 rounded-full text-sm px-2 py-2 
-   focus:outline-none" (click)="menuDessert()">Galletas</button>
+   focus:outline-none" (click)="menuDessert()">Gelatinas</button>
 
         
 
       </li>
-      <li>
 
-        <button type="button" class="button-navbar text-body bg-neutral-secondary-medium 
-   box-border border border-default-medium hover:bg-neutral-tertiary-medium 
-   hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs 
-   font-medium leading-2 rounded-full text-sm px-2 py-2 
-   focus:outline-none" >Bebidas</button>
 
-      </li>
+      
 
       
 
     </ul>
 
 
-  <div class="   flex items-center justify-center p-2 rounded-full left-0">
-
-    <ng-icon  name="lucideSearch"></ng-icon>
-
-  </div>
+ 
 
     
 
    
 </nav>
+
+
+
+  </div>
+
+
 

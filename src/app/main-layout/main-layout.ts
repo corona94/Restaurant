@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { Navbar } from './navbar/navbar';
 import { RouterOutlet } from '@angular/router';
-import { MenuDish } from './menu-dish/menu-dish';
+import { AddToCar } from './add-to-car/add-to-car';
+
 
 @Component({
   selector: 'app-main-layout',
   standalone: true,
-  imports: [RouterOutlet, Navbar],
+  imports: [RouterOutlet, Navbar, AddToCar],
   templateUrl: './main-layout.html',
   styleUrl: './main-layout.css',
 })

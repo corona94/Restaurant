@@ -1,7 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import {lucideMenu,lucideShoppingCart,lucideHouse,lucideSearch  } from '@ng-icons/lucide';
+import {lucideMenu,lucideShoppingCart,lucideHouse,lucideSearch,lucidePhone  } from '@ng-icons/lucide';
+import {AddToCar} from '../add-to-car/add-to-car';
+
 
 
 
@@ -11,9 +13,9 @@ import {lucideMenu,lucideShoppingCart,lucideHouse,lucideSearch  } from '@ng-icon
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [NgIcon],
+  imports: [NgIcon, AddToCar],
   viewProviders: [provideIcons({ lucideMenu, lucideShoppingCart, 
-    lucideHouse, lucideSearch})],
+    lucideHouse, lucideSearch, lucidePhone })],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })

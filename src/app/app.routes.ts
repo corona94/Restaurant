@@ -3,6 +3,8 @@ import { MainLayout } from './main-layout/main-layout';
 import { MenuDish } from './main-layout/menu-dish/menu-dish';
 import { MenuDessert } from './main-layout/menu-dessert/menu-dessert';
 
+
+
 export const routes: Routes = [
     {
         path: '',
@@ -23,6 +25,8 @@ export const routes: Routes = [
                 path: 'menu-dessert',
                 component: MenuDessert
             }
+          
+          
         ]
     }
 ];
