@@ -67,6 +67,34 @@ get total(): number {
 
 }
 
+
+sendWhatsApp(): void {
+
+  const phone = '523317988980'; // Tu número
+
+  let message = 'Hola, quisiera realizar el siguiente pedido:%0A%0A';
+
+  this.itemsInCart.forEach(item => {
+
+    const price = Number(item.price.replace('$', ''));
+
+    const subtotal = price * item.quantity;
+
+    message += `🍽️ ${item.name}%0A`;
+    message += `Cantidad: ${item.quantity}%0A`;
+    message += `Precio: $${price.toFixed(2)}%0A`;
+    message += `Subtotal: $${subtotal.toFixed(2)}%0A%0A`;
+
+  });
+
+  message += `💰 TOTAL: $${this.total.toFixed(2)}`;
+
+  window.open(
+    `https://wa.me/${phone}?text=${message}`,
+    '_blank'
+  );
+}
+
  
 }
 
