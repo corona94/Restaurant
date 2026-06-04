@@ -3,7 +3,7 @@
   <!-- Botón carrito -->
   <div
     (click)="toggleCart()"
-    class="relative rounded-full p-4 border-2 border-[#89B0AE] bg-white shadow-lg cursor-pointer">
+    class="relative rounded-full p-4  bg-white shadow-lg cursor-pointer">
 
     <span
       class="absolute -top-2 -right-1 flex items-center justify-center
@@ -34,17 +34,26 @@
              bg-white rounded-xl shadow-2xl z-50 p-6">
 
       <!-- Header -->
-      <div class="flex justify-between items-center border-b pb-4">
+      <div class="flex justify-between items-center pb-4">
 
         <h2 class="text-2xl font-bold">
           Mi carrito
         </h2>
 
-        <button
-          (click)="showCart = false"
-          class="text-3xl leading-none">
-          ×
-        </button>
+        <div (click)="showCart = false" class=" h-14 w-14 relative rounded-full  bg-[#555B6E]
+         shadow-lg cursor-pointer flex items-center justify-center">
+
+          <ng-icon
+          name="lucideX"
+          size="32"
+          color="#FFFFFF"
+          strokeWidth="3">
+        </ng-icon>  
+
+        </div>
+        
+
+      
 
       </div>
 
@@ -53,7 +62,7 @@
 
         <div
           *ngFor="let item of itemsInCart; let i = index"
-          class="flex items-center p-3 rounded-xl shadow-md border mb-3 relative">
+          class="flex items-center p-3 rounded-xl shadow-md mr-3 ml-3 mb-3 relative">
 
           <!-- Imagen -->
           <img

@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import {lucideShoppingCart, lucideMinus  } from '@ng-icons/lucide';
+import {lucideShoppingCart, lucideMinus, lucideX  } from '@ng-icons/lucide';
 import { Cart } from '../services/cart';
 
 import { CommonModule } from '@angular/common';
@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-add-to-car',
   imports: [NgIcon, CommonModule],
-  viewProviders: [provideIcons({ lucideShoppingCart, lucideMinus })],
+  viewProviders: [provideIcons({ lucideShoppingCart, lucideMinus, lucideX })],
   templateUrl: './add-to-car.html',
   styleUrl: './add-to-car.css',
 })

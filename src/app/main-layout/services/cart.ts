@@ -17,9 +17,11 @@ export class Cart {
 
   addToCart(item: any): void {
 
-  const existingItem = this.items.find(
-    product => product.idDish === item.idDish
-  );
+    const itemId = item.idDish || item.idGelatina;
+
+ const existingItem = this.items.find(product =>
+  (product.idDish || product.idGelatina) === itemId
+);
 
   if (existingItem) {
 

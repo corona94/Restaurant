@@ -63,6 +63,8 @@
     type="text"
     id="first_name"
     placeholder="Buscar"
+    [(ngModel)]="serachDish"
+     (input)="funcionSearch()"
     class=" border border-[#89B0AE]  rounded-2xl
     text-heading text-sm  focus:ring-brand focus:border-brand 
     block w-full px-3 py-2.5 pr-10 shadow-xs placeholder:text-body"

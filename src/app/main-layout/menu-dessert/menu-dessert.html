@@ -1,41 +1,65 @@
-<section>
+<section class="py-2 pb-32">
 
   <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 py-1 px-4">
 
-    <!-- Card 1 -->
-    <div class="flex items-center p-2 border border-black/10 
-    hover:border-black/20 transition-colors rounded-xl w-full">
+    <div
+      *ngFor="let gelatina of filteredDishes"
+      class="background-color-card flex items-center p-2 shadow-xl
+             hover:border-black/20 transition-colors rounded-xl w-full relative">
 
-      <img 
-        src="imagenes/image.png" 
-        alt="Ensalada"
+      <img
+        [src]="gelatina.image"
+        [alt]="gelatina.name"
         class="w-[118px] h-[118px] rounded-lg object-cover" />
 
       <div class="ml-4">
-        <h3 class="text-lg text-zinc-900">
-          Galleta diabetica
+
+        <h3 class="text-title text-lg font-semibold text-zinc-900">
+          {{ gelatina.name }}
         </h3>
 
-        <p class="text-base text-zinc-600">
-          Vegetales crujientes y aderezo ligero.
+        <p class="text-description text-base text-zinc-600">
+          {{ gelatina.description }}
         </p>
 
-        <p class="text-lg text-zinc-900 mt-3">
-          $120
+        <p class="text-description text-lg text-zinc-900 mt-3">
+          {{ gelatina.price }}
         </p>
 
         <div class="text-sm text-zinc-600 flex items-center gap-1.5">
-          Saludable
-          <div class="size-1 rounded-full bg-[#777777]"></div>
-          Fresca
+
+          <ng-container *ngFor="let etiqueta of gelatina.etiquetas; let last = last">
+
+            <span class="text-description">
+              {{ etiqueta }}
+            </span>
+
+            <div
+              *ngIf="!last"
+              class="size-1 rounded-full bg-[#777777]">
+            </div>
+
+          </ng-container>
+
         </div>
+
+        <div
+          class="absolute bottom-2 right-2 cursor-pointer"
+          (click)="AddToCart(gelatina.idGelatina)">
+
+          <ng-icon
+            name="lucideCirclePlus"
+            class="text-3xl stroke-current"
+            strokeWidth="3"
+            color="#89B0AE">
+          </ng-icon>
+
+        </div>
+
       </div>
 
     </div>
 
-   
-
   </div>
 
 </section>
-
